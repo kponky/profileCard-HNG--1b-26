@@ -137,7 +137,6 @@ body::before {
   }
 }
 
-/* ── AVATAR PANEL  */
 .avatar-panel {
   background: var(--grad-hero);
   padding: 2rem 1.5rem;
@@ -319,12 +318,13 @@ figcaption {
   font-size: 0.87rem;
   line-height: 1.75;
   color: #3a344f;
-  max-width: 60ch;
+  max-width: 90%;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   line-clamp: 4;
   -webkit-box-orient: vertical;
+  text-align: justify;
 }
 [data-testid="test-user-bio"].expanded {
   display: block;
