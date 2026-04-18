@@ -1,0 +1,108 @@
+<article
+    id="profile-card"
+    data-testid="test-profile-card"
+    aria-label="Profile card for Abasi-Ikponke Asuquo, AEA Digitals"
+  >
+ 
+    <!-- ════ HERO ════════════════════════════════════════ -->
+    <header class="hero">
+ 
+      <!-- LEFT: avatar -->
+      <div class="avatar-panel">
+        <!--
+          <figure> groups the image with its caption (WCAG 1.3.1).
+          alt text describes WHO and their expression — not just "photo".
+          data-testid="test-user-avatar"  ← REQUIRED
+        -->
+        <figure>
+          <img
+            data-testid="test-user-avatar"
+            id="avatar-img"
+            src="https://drive.google.com/file/d/18vuqow32153c1xM_uXDXm1SUApMYqFt1/view?usp=sharing"
+            alt="Abasi-Ikponke Asuquo, Frontend Developer and Virtual Assistant, smiling with confidence"
+            width="150"
+            height="150"
+          />
+          <figcaption>Abasi-Ikponke Asuquo · AEA Digitals</figcaption>
+        </figure>
+ 
+        <!-- Upload — keyboard accessible via label/input pair -->
+        <div class="upload-wrap">
+          <label class="upload-btn" for="avatar-file">
+            <span aria-hidden="true"></span> Change photo
+          </label>
+          <input
+            type="file"
+            id="avatar-file"
+            accept="image/*"
+            aria-label="Upload a new profile photo"
+          />
+        </div>
+ 
+        <span class="brand-tag">AEA Digitals</span>
+      </div>
+ 
+      <!-- RIGHT: name / bio / time -->
+      <div class="identity">
+ 
+        <p class="eyebrow">Frontend Developer · Virtual Assistant · Aspiring Software Engineer</p>
+ 
+    
+        <h2 data-testid="test-user-name">Abasi-Ikponke<br />Asuquo</h2>
+ 
+        <!-- skill chips — role="list" because CSS removes default list semantics -->
+        <div class="chips" role="list" aria-label="Core technical skills">
+          <span class="chip chip--purple" role="listitem">React</span>
+          <span class="chip chip--sky"    role="listitem">TypeScript</span>
+          <span class="chip chip--purple" role="listitem">Next.js</span>
+          <span class="chip chip--orange" role="listitem">Remix</span>
+          <span class="chip chip--sky"    role="listitem">Tailwind CSS</span>
+          <span class="chip chip--coral"  role="listitem">Git / GitHub</span>
+          <span class="chip chip--purple" role="listitem">Virtual Assistant</span>
+        </div>
+ 
+     
+        <div class="bio-wrap">
+          <p data-testid="test-user-bio" id="bio-text">
+            I am Abasi-Ikponke Asuquo, a passionate Frontend Developer, Virtual Assistant, and
+            aspiring Software Engineer with expertise in React, TypeScript, Remix, Next.js,
+            Tailwind CSS, CSS3, Git, and GitHub. My focus is on creating intuitive, user-friendly
+            interfaces, seamlessly integrating APIs, developing responsive web applications, and
+            optimising performance through clean and efficient code. Alongside my technical
+            background, I provide Virtual Assistant support in task management, internet research,
+            email communication, calendar organisation, documentation, customer support, and digital
+            workflow coordination. My journey in tech spans a BSc.Ed in Political Science from the
+            University of Uyo, Nigeria; the ALX Software Engineering program; Women Techsters
+            Fellowship Class of 2024; ALX Virtual Assistant and ALX AiCE courses; an ongoing Virtual
+            Assistant Internship; and an ongoing Frontend Development Internship. These experiences
+            have equipped me with hands-on knowledge in software development, digital productivity
+            tools, remote collaboration, and structured administrative systems. Prior to tech, my
+            background in education strengthened my communication, organisation, critical thinking,
+            and analytical skills — all of which I now apply to solving technical problems,
+            supporting teams, managing workflows, and collaborating effectively in multidisciplinary
+            environments. I am always eager to connect with fellow professionals in tech, remote
+            operations, and business support.
+          </p>
+          <button
+            class="expand-btn"
+            id="expand-bio"
+            aria-expanded="false"
+            aria-controls="bio-text"
+          >Read more <span aria-hidden="true">↓</span></button>
+        </div>
+ 
+        
+        <div class="time-row">
+          <span class="live-dot" role="presentation" aria-hidden="true"></span>
+          <span class="time-label" id="time-lbl">Time in ms</span>
+          <time
+            data-testid="test-user-time"
+            id="time-display"
+            aria-live="polite"
+            aria-atomic="true"
+            aria-labelledby="time-lbl"
+          ></time>
+        </div>
+ 
+      </div><!-- /.identity -->
+    </header>
