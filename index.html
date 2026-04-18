@@ -1,108 +1,494 @@
-<article
-    id="profile-card"
-    data-testid="test-profile-card"
-    aria-label="Profile card for Abasi-Ikponke Asuquo, AEA Digitals"
-  >
- 
-    <!-- ════ HERO ════════════════════════════════════════ -->
-    <header class="hero">
- 
-      <!-- LEFT: avatar -->
-      <div class="avatar-panel">
-        <!--
-          <figure> groups the image with its caption (WCAG 1.3.1).
-          alt text describes WHO and their expression — not just "photo".
-          data-testid="test-user-avatar"  ← REQUIRED
-        -->
-        <figure>
-          <img
-            data-testid="test-user-avatar"
-            id="avatar-img"
-            src="https://drive.google.com/file/d/18vuqow32153c1xM_uXDXm1SUApMYqFt1/view?usp=sharing"
-            alt="Abasi-Ikponke Asuquo, Frontend Developer and Virtual Assistant, smiling with confidence"
-            width="150"
-            height="150"
-          />
-          <figcaption>Abasi-Ikponke Asuquo · AEA Digitals</figcaption>
-        </figure>
- 
-        <!-- Upload — keyboard accessible via label/input pair -->
-        <div class="upload-wrap">
-          <label class="upload-btn" for="avatar-file">
-            <span aria-hidden="true"></span> Change photo
-          </label>
-          <input
-            type="file"
-            id="avatar-file"
-            accept="image/*"
-            aria-label="Upload a new profile photo"
-          />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A.E.A profile Card</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#profile-card">Skip to profile content</a>
+    <article
+      id="profile-card"
+      data-testid="test-profile-card"
+      aria-label="Profile card for Abasi-Ikponke Asuquo, A.E.A Digitals"
+    >
+      <header class="hero">
+        <div class="avatar-panel">
+          <figure>
+            <img
+              data-testid="test-user-avatar"
+              id="avatar-img"
+              src="https://res.cloudinary.com/dpe41owwj/image/upload/f_auto,q_auto/img_1_vhrl75"
+              alt="Abasi-Ikponke Asuquo, Frontend Developer and Virtual Assistant, smiling with confidence"
+              width="150"
+              height="150"
+            />
+            <figcaption>Abasi-Ikponke Asuquo </figcaption>
+          </figure>
+
+          <div class="upload-wrap">
+            <label class="upload-btn" for="avatar-file">
+              <!-- Camera icon (Heroicons) -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+                />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+              Change photo
+            </label>
+            <input
+              type="file"
+              id="avatar-file"
+              accept="image/*"
+              aria-label="Upload a new profile photo"
+            />
+          </div>
+
+          <span class="brand-tag">A.E.A Digitals</span>
         </div>
- 
-        <span class="brand-tag">AEA Digitals</span>
-      </div>
- 
-      <!-- RIGHT: name / bio / time -->
-      <div class="identity">
- 
-        <p class="eyebrow">Frontend Developer · Virtual Assistant · Aspiring Software Engineer</p>
- 
-    
-        <h2 data-testid="test-user-name">Abasi-Ikponke<br />Asuquo</h2>
- 
-        <!-- skill chips — role="list" because CSS removes default list semantics -->
-        <div class="chips" role="list" aria-label="Core technical skills">
-          <span class="chip chip--purple" role="listitem">React</span>
-          <span class="chip chip--sky"    role="listitem">TypeScript</span>
-          <span class="chip chip--purple" role="listitem">Next.js</span>
-          <span class="chip chip--orange" role="listitem">Remix</span>
-          <span class="chip chip--sky"    role="listitem">Tailwind CSS</span>
-          <span class="chip chip--coral"  role="listitem">Git / GitHub</span>
-          <span class="chip chip--purple" role="listitem">Virtual Assistant</span>
-        </div>
- 
-     
-        <div class="bio-wrap">
-          <p data-testid="test-user-bio" id="bio-text">
-            I am Abasi-Ikponke Asuquo, a passionate Frontend Developer, Virtual Assistant, and
-            aspiring Software Engineer with expertise in React, TypeScript, Remix, Next.js,
-            Tailwind CSS, CSS3, Git, and GitHub. My focus is on creating intuitive, user-friendly
-            interfaces, seamlessly integrating APIs, developing responsive web applications, and
-            optimising performance through clean and efficient code. Alongside my technical
-            background, I provide Virtual Assistant support in task management, internet research,
-            email communication, calendar organisation, documentation, customer support, and digital
-            workflow coordination. My journey in tech spans a BSc.Ed in Political Science from the
-            University of Uyo, Nigeria; the ALX Software Engineering program; Women Techsters
-            Fellowship Class of 2024; ALX Virtual Assistant and ALX AiCE courses; an ongoing Virtual
-            Assistant Internship; and an ongoing Frontend Development Internship. These experiences
-            have equipped me with hands-on knowledge in software development, digital productivity
-            tools, remote collaboration, and structured administrative systems. Prior to tech, my
-            background in education strengthened my communication, organisation, critical thinking,
-            and analytical skills — all of which I now apply to solving technical problems,
-            supporting teams, managing workflows, and collaborating effectively in multidisciplinary
-            environments. I am always eager to connect with fellow professionals in tech, remote
-            operations, and business support.
+
+        <div class="identity">
+          <p class="eyebrow">
+            Frontend Developer · Virtual Assistant · Aspiring Software Engineer
           </p>
-          <button
-            class="expand-btn"
-            id="expand-bio"
-            aria-expanded="false"
-            aria-controls="bio-text"
-          >Read more <span aria-hidden="true">↓</span></button>
+
+          <h2 data-testid="test-user-name">Abasi-Ikponke<br />Asuquo</h2>
+
+          <div class="chips" role="list" aria-label="Core technical skills">
+            <span class="chip chip--purple" role="listitem">React</span>
+            <span class="chip chip--sky" role="listitem">TypeScript</span>
+            <span class="chip chip--purple" role="listitem">Next.js</span>
+            <span class="chip chip--orange" role="listitem">Remix</span>
+            <span class="chip chip--sky" role="listitem">Tailwind CSS</span>
+            <span class="chip chip--coral" role="listitem">Git / GitHub</span>
+            <span class="chip chip--purple" role="listitem"
+              >Virtual Assistant</span
+            >
+          </div>
+
+          <div class="bio-wrap">
+            <p data-testid="test-user-bio" id="bio-text">
+              I am Abasi-Ikponke Asuquo, a passionate Frontend Developer,
+              Virtual Assistant, and aspiring Software Engineer with expertise
+              in React, TypeScript, Remix, Next.js, Tailwind CSS, CSS3, Git, and
+              GitHub. My focus is on creating intuitive, user-friendly
+              interfaces, seamlessly integrating APIs, developing responsive web
+              applications, and optimising performance through clean and
+              efficient code. Alongside my technical background, I provide
+              Virtual Assistant support in task management, internet research,
+              email communication, calendar organisation, documentation,
+              customer support, and digital workflow coordination. My journey in
+              tech spans a BSc.Ed in Political Science from the University of
+              Uyo, Nigeria; the ALX Software Engineering program; Women
+              Techsters Fellowship Class of 2024; ALX Virtual Assistant and ALX
+              AiCE courses; an ongoing Virtual Assistant Internship; and an
+              ongoing Frontend Development Internship. These experiences have
+              equipped me with hands-on knowledge in software development,
+              digital productivity tools, remote collaboration, and structured
+              administrative systems. Prior to tech, my background in education
+              strengthened my communication, organisation, critical thinking,
+              and analytical skills — all of which I now apply to solving
+              technical problems, supporting teams, managing workflows, and
+              collaborating effectively in multidisciplinary environments. I am
+              always eager to connect with fellow professionals in tech, remote
+              operations, and business support.
+            </p>
+            <button
+              class="expand-btn"
+              id="expand-bio"
+              aria-expanded="false"
+              aria-controls="bio-text"
+            >
+              Read more
+              <svg
+                id="expand-chevron"
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                style="transition: transform 0.25s"
+              >
+                <polyline points="6 9 12 15 18 9" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="time-row">
+            <span
+              class="live-dot"
+              role="presentation"
+              aria-hidden="true"
+            ></span>
+            <span class="time-label" id="time-lbl">time in ms</span>
+            <time
+              data-testid="test-user-time"
+              id="time-display"
+              aria-live="polite"
+              aria-atomic="true"
+              aria-labelledby="time-lbl"
+            ></time>
+          </div>
         </div>
- 
-        
-        <div class="time-row">
-          <span class="live-dot" role="presentation" aria-hidden="true"></span>
-          <span class="time-label" id="time-lbl">Time in ms</span>
-          <time
-            data-testid="test-user-time"
-            id="time-display"
-            aria-live="polite"
-            aria-atomic="true"
-            aria-labelledby="time-lbl"
-          ></time>
-        </div>
- 
-      </div><!-- /.identity -->
-    </header>
+      </header>
+
+      <div class="lower">
+        <!-- SOCIAL -->
+        <section class="panel" aria-labelledby="social-hd">
+          <div class="panel-heading">
+            <div class="panel-icon panel-icon--social" aria-hidden="true">
+              <!-- Link / chain icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                />
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                />
+              </svg>
+            </div>
+            <h3 class="panel-title" id="social-hd">Find me online</h3>
+          </div>
+          <nav aria-label="Abasi-Ikponke's social media profiles">
+            <ul data-testid="test-user-social-links">
+              <li>
+                <a
+                  data-testid="test-user-social-twitter"
+                  href="https://x.com/IamAbasz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abasi-Ikponke on X / Twitter @aea_digitals (opens in new tab)"
+                >
+                  <!-- X / Twitter logo -->
+                  <div
+                    class="social-icon social-icon--twitter"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="https://commons.wikimedia.org/wiki/File:X_icon.svg"
+                      viewBox="0 0 24 24"
+                      fill="#0369a1"
+                    >
+                      <path
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L2.25 2.25h6.324l4.253 5.622 5.417-5.622Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="social-name"> X / Twitter</span>
+                    <span class="social-handle">IamAbasz</span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  data-testid="test-user-social-github"
+                  href="https://github.com/kponky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abasi-Ikponke on GitHub kponky (opens in new tab)"
+                >
+                  <!-- GitHub mark -->
+                  <div
+                    class="social-icon social-icon--github"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="#6b21a8"
+                    >
+                      <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="social-name">GitHub</span>
+                    <span class="social-handle">kponky</span>
+                  </div>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  data-testid="test-user-social-linkedin"
+                  href="https://www.linkedin.com/in/abasi-ikponkeasuquo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abasi-Ikponke on LinkedIn (opens in new tab)"
+                >
+                  <!-- LinkedIn logo -->
+                  <div
+                    class="social-icon social-icon--linkedin"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="#1d4ed8"
+                    >
+                      <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="social-name">LinkedIn</span>
+                    <span class="social-handle">Abasi-ikponke-asuquo</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+
+        <!-- HOBBIES -->
+        <section class="panel" aria-labelledby="hobbies-hd">
+          <div class="panel-heading">
+            <div class="panel-icon panel-icon--hobbies" aria-hidden="true">
+              <!-- Sparkle / star icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+            </div>
+            <h3 class="panel-title" id="hobbies-hd">What I love</h3>
+          </div>
+          <ul data-testid="test-user-hobbies">
+            <li>
+              <span class="bullet bullet--hobby" aria-hidden="true">
+                <!-- Check / arrow right -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0369a1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              Building pixel-perfect, accessible UIs
+            </li>
+            <li>
+              <span class="bullet bullet--hobby" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0369a1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              Open-source contribution and community learning
+            </li>
+            <li>
+              <span class="bullet bullet--hobby" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0369a1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              Exploring new frameworks and tech articles
+            </li>
+            <li>
+              <span class="bullet bullet--hobby" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0369a1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              Journaling and digital workflow organisation
+            </li>
+            <li>
+              <span class="bullet bullet--hobby" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#0369a1"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </span>
+              Mentoring and connecting with women in tech
+            </li>
+          </ul>
+        </section>
+
+        <!-- DISLIKES -->
+        <section class="panel" aria-labelledby="dislikes-hd">
+          <div class="panel-heading">
+            <div class="panel-icon panel-icon--dislikes" aria-hidden="true">
+              <!-- Ban / block icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07" />
+              </svg>
+            </div>
+            <h3 class="panel-title" id="dislikes-hd">What I Dislike</h3>
+          </div>
+          <ul data-testid="test-user-dislikes">
+            <li>
+              <span class="bullet bullet--dislike" aria-hidden="true">
+                <!-- X mark -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#be123c"
+                  stroke-width="3.2"
+                  stroke-linecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+              Inaccessible interfaces that exclude users
+            </li>
+            <li>
+              <span class="bullet bullet--dislike" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#be123c"
+                  stroke-width="3.2"
+                  stroke-linecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+              Vague briefs with no clear deliverables
+            </li>
+            <li>
+              <span class="bullet bullet--dislike" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#be123c"
+                  stroke-width="3.2"
+                  stroke-linecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+              Code without comments or documentation
+            </li>
+            <li>
+              <span class="bullet bullet--dislike" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#be123c"
+                  stroke-width="3.2"
+                  stroke-linecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+              Meetings that should have been an email
+            </li>
+            <li>
+              <span class="bullet bullet--dislike" aria-hidden="true">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#be123c"
+                  stroke-width="3.2"
+                  stroke-linecap="round"
+                >
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </span>
+              Slow feedback loops that stall momentum
+            </li>
+          </ul>
+        </section>
+      </div>
+      <!-- /.lower -->
+
+      <footer class="card-footer">
+        <p class="footer-brand">A.E.A Digitals &copy; 2026</p>
+        <p class="footer-note" id="render-stamp"></p>
+      </footer>
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>
